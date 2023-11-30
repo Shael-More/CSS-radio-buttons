@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+
+html,
+body {
+    height: 100%;
+    background: #222222;
+    font-family: 'Poppins',
+    sans-serif;
+
+}
+
+.alert {
+    box-sizing: border-box;
+    background-color: #8dffe1;
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 300;
+    padding: 1.25rem 2.5rem;
+    color: #333;
+}
+
+.alert h2 {
+    font-size: 1.375rem;
+    color: #232323;
+    margin-top: 0;
+}
+.alert p {
+    line-height: 1.6em;
+    font-size: 1.125rem ;
+}
+
+.container {
+    display: block;
+    position: relative;
+    margin: 2.5rem auto;
+    height: auto;
+    width: 31.25rem;
+    padding: 1.25rem;
+}
+
+.container h2 {
+    color: #aaa;
+}
+
+.container ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+
+ul li {
+    color: #aaa;
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid #333;
+}
+
+ul li input[type="radio"] {
+    position: absolute;
+    visibility: hidden;
+}
+
+ul li label {
+    display: block;
+    position: relative;
+    font-weight: 300;
+    font-size: 1.35em;
+    padding: 1.5625rem 1.5625rem 1.5625rem 5rem;
+    margin: .625rem auto;
+    height: 1.875rem;
+    z-index: 9;
+    cursor: pointer;
+    transition: all 0.25s linear;
+}
+
+ul li:hover label{
+    color: #fff;
+}
+
+ul li .check {
+    display: block;
+    position: absolute;
+    border: .3125rem solid #aaa;
+    border-radius: 100%;
+    height: 1.5625rem;
+    width: 1.5625rem;
+    top: 2.125rem;
+    left: 1.25rem;
+    z-index: 5;
+    transition: border .25s linear;
+}
+
+ul li:hover .check{
+    border: 5px solid #fff;
+}
+
+ul li .check::before {
+    display: block;
+    position: absolute;
+    content: "";
+    border-radius: 100%;
+    height: .9375rem;
+    width: .9375rem;
+    top: .3125rem;
+    left: .3125rem;
+    margin: auto;
+    transform: background 0.25s linear;
+}
+
+input[type="radio"]:checked ~ .check {
+    border: 5px solid #0dff92;
+}
+
+input[type="radio"]:checked ~ .check::before {
+    background: #0dff92;
+}
+
+input[type=radio]:checked~label {
+    color: #0DFF92;
+}
